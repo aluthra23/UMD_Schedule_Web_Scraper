@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import csv
-import pandas
+import pandas as pd
 
 # URL of the University of Maryland's approved courses page
 url = 'https://academiccatalog.umd.edu/undergraduate/approved-courses/'
@@ -34,7 +34,7 @@ def separate_course_prefix(full_course_prefix: str):
 
 with open('umd_course_prefixes.csv', 'w', newline='') as csvfile:
     writer = csv.writer(csvfile)
-    writer.writerow(['Course Prefix', 'Full Form'])
+    writer.writerow(['COURSE PREFIX', 'FULL FORM'])
 
     for entry in course_prefixes:
         course_prefix, full_form = separate_course_prefix(entry)
@@ -61,8 +61,8 @@ course_prefixes = soup.find_all('div', class_='course-prefix row')
 
 with open('umd_course_prefixes.csv', 'a', newline='') as csvfile:
     writer = csv.writer(csvfile)
-    df = pandas.read_csv('umd_course_prefixes.csv')
-    existing_course_prefixes = set(df["Course Prefix"])
+    df = pd.read_csv('umd_course_prefixes.csv')
+    existing_course_prefixes = set(df["COURSE PREFIX"])
 
     for entry in course_prefixes:
         course_prefix = entry.find('span', class_='prefix-abbrev push_one two columns').text.strip()
@@ -73,3 +73,12 @@ with open('umd_course_prefixes.csv', 'a', newline='') as csvfile:
 
 print('Data successfully appended to schedule_course_prefixes.csv')
 
+df = pd.read_csv('umd_course_prefixes.csv')
+
+# Sort the DataFrame by the 'Course Prefix' column
+df_sorted = df.sort_values(by='COURSE PREFIX')
+
+# Write the sorted DataFrame back to the CSV file
+df_sorted.to_csv('umd_course_prefixes.csv', index=False)
+
+print("CSV file sorted and saved successfully.")

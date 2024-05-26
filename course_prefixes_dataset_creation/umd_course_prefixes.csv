@@ -1,4 +1,5 @@
-Course Prefix,Full Form
+COURSE PREFIX,FULL FORM
+AAPS,Academic Achievement Programs
 AASP,African American Studies
 AAST,Asian American Studies
 ABRM,Anti-Black Racism
@@ -23,28 +24,47 @@ ARUX,Arts and Humanities Education Abroad
 ASTR,Astronomy
 BCHM,Biochemistry
 BIOE,Bioengineering
+BIOI,Bioinformatics and Computational Biology
+BIOL,Biology
 BIOM,Biometrics
+BIPH,Biophysics
+BISI,Biological Sciences
 BMGT,Business and Management
+BMSO,Online Business MS Programs
 BSCI,Biological Sciences Program
 BSCV,CIVICUS
 BSGC,Global Communities
 BSOS,Behavioral and Social Sciences
 BSST,Terrorism Studies
+BUAC,Accounting and Information Assurance
+BUDT,Decision and Information Technologies
+BUFN,Finance
+BULM,"Logistics, Business, and Public Policy"
+BUMK,Marketing
+BUSI,Part-Time MBA Program
+BUSM,Full-Time MBA Program
+BUSO,Online MBA Program
+CBMG,Cell Biology & Molecular Genetics
 CCJS,Criminology and Criminal Justice
 CHBE,Chemical and Biomolecular Engineering
 CHEM,Chemistry
 CHIN,Chinese
+CHPH,Chemical Physics
 CHSE,"Counseling, Higher Education, and Special Education"
 CINE,Cinema and Media Studies
 CINX,Cinema and Media Studies Education Abroad
 CLAS,Classics
 CLAX,Classics Education Abroad
+CLFS,Chemical and Life Sciences
 CMLT,Comparative Literature
 CMLX,Comparative Literature Education Abroad
+CMNS,"Computer, Math, and Natural Sciences"
 CMSC,Computer Science
 COMM,Communication
 COMX,Communication Education Abroad
 CPBE,"College Park Scholars-Business, Society, and Economy"
+CPCV,College Park Scholars-Civic Engagement for Social Good
+CPDJ,College Park Scholars-Data Justice
 CPET,"College Park Scholars-Environment, Technology & Economy"
 CPGH,College Park Scholars-Global Public Health
 CPJT,College Park Scholars-Justice and Legal Thought
@@ -58,6 +78,7 @@ CPSN,College Park Scholars-International Studies
 CPSP,College Park Scholars Program
 CPSS,"College Park Scholars-Science, Technology and Society"
 DANC,Dance
+DATA,Data Science and Analytics
 EALL,East Asian Languages and Literatures
 ECON,Economics
 EDCI,Curriculum and Instruction
@@ -68,9 +89,11 @@ EDMS,"Measurement, Statistics, and Evaluation"
 EDPS,Education Policy Studies
 EDSP,"Education, Special"
 EDUC,Education
+EMBA,Executive MBA Program
 ENAE,"Engineering, Aerospace"
 ENBC,Biocomputational Engineering
 ENCE,"Engineering, Civil"
+ENCO,"Engineering, Cooperative Education"
 ENEB,Cyber-Physical Systems Engineering
 ENEE,Electrical & Computer Engineering
 ENES,Engineering Science
@@ -80,14 +103,19 @@ ENGX,English Education Abroad
 ENMA,"Engineering, Materials"
 ENME,"Engineering, Mechanical"
 ENNU,"Engineering, Nuclear"
+ENPM,"Engineering, Professional Masters"
 ENRE,Reliability Engineering
+ENSE,Systems Engineering
 ENSP,Environmental Science and Policy
 ENST,Environmental Science and Technology
+ENTM,Entomology
+ENTS,Telecommunications
 EPIB,Epidemiology and Biostatistics
 FGSM,Federal and Global Fellows
 FIRE,First-Year Innovation & Research Experience
 FMSC,Family Science
 FREN,French
+GBHL,Global Health
 GEMS,Gemstone
 GEOG,Geographical Sciences
 GEOL,Geology
@@ -96,6 +124,7 @@ GERS,German Studies
 GREK,Greek
 GVPT,Government and Politics
 HACS,ACES-Cybersecurity
+HBUS,Interdisciplinary Business Honors
 HDCC,Design Cultures and Creativity
 HEBR,Hebrew
 HEIP,Entrepreneurship and Innovation
@@ -115,6 +144,7 @@ IDEA,Academy for Innovation & Entrepreneurship
 IMDM,Immersive Media Design
 IMMR,Immigration Studies
 INAG,Institute of Applied Agriculture
+INFM,Information Management
 INST,Information Studies
 ISRL,Israel Studies
 ITAL,Italian
@@ -140,13 +170,18 @@ MIEH,Maryland Institute for Applied Environmental Health
 MITH,Maryland Institute for Technology in the Humanities
 MLAW,MPower Undergraduate Law Programs
 MLSC,MD Language Science Ctr
+MOCB,Molecular and Cell Biology
+MSML,Machine Learning
+MSQC,Quantum Computing
 MUED,Music Education
 MUET,Ethnomusicology
 MUSC,School of Music
 MUSP,Music Performance
+NACS,Neuroscience & Cognitive Science
 NAVY,Navy
 NEUR,Neuroscience
 NFSC,Nutrition and Food Science
+NIAS,National Institute of Aeronautics - North Carolina
 PEER,Health Center
 PERS,Persian
 PHIL,Philosophy
@@ -181,43 +216,8 @@ UMEI,Maryland English Institute
 UNIV,University Courses
 URSP,Urban Studies and Planning
 USLT,Latina/o Studies
+VMSC,Veterinary Medical Sciences
 WEID,Words of Engagement Intergroup Dialogue Program
 WGSS,"Women, Gender, and Sexuality Studies"
 WMSX,Women's Studies Education Abroad
-AAPS,Academic Achievement Programs
-BIOI,Bioinformatics and Computational Biology
-BIOL,Biology
-BIPH,Biophysics
-BISI,Biological Sciences
-BMSO,Online Business MS Programs
-BUAC,Accounting and Information Assurance
-BUDT,Decision and Information Technologies
-BUFN,Finance
-BULM,"Logistics, Business, and Public Policy"
-BUMK,Marketing
-BUSI,Part-Time MBA Program
-BUSM,Full-Time MBA Program
-BUSO,Online MBA Program
-CBMG,Cell Biology & Molecular Genetics
-CHPH,Chemical Physics
-CLFS,Chemical and Life Sciences
-CMNS,"Computer, Math, and Natural Sciences"
-CPCV,College Park Scholars-Civic Engagement for Social Good
-CPDJ,College Park Scholars-Data Justice
-DATA,Data Science and Analytics
-EMBA,Executive MBA Program
-ENCO,"Engineering, Cooperative Education"
-ENPM,"Engineering, Professional Masters"
-ENSE,Systems Engineering
-ENTM,Entomology
-ENTS,Telecommunications
-GBHL,Global Health
-HBUS,Interdisciplinary Business Honors
-INFM,Information Management
-MOCB,Molecular and Cell Biology
-MSML,Machine Learning
-MSQC,Quantum Computing
-NACS,Neuroscience & Cognitive Science
-NIAS,National Institute of Aeronautics - North Carolina
-VMSC,Veterinary Medical Sciences
 XPER,xFoundry
