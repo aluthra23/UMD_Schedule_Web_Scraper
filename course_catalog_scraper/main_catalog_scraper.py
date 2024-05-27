@@ -6,7 +6,7 @@ with open('umd_catalog_courses.csv', mode='w', newline='') as file:
     # Create a CSV writer object
     writer = csv.writer(file)
     # Write the header row
-    writer.writerow(constants.CSV_HEADER)
+    writer.writerow(constants.CSV_CATALOG_COURSES_HEADER)
 
     # Iterate over each course acronym
     for course_acronym in constants.course_acronyms:

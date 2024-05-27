@@ -28,7 +28,7 @@ course_acronyms = [
     "UNIV", "URSP", "USLT", "VMSC", "WMSX", "WEID", "WGSS", "XPER"
 ]
 
-CSV_HEADER = [
+CSV_CATALOG_COURSES_HEADER = [
     "COURSE PREFIX",
     "COURSE NUMBER",
     "NAME",
@@ -44,7 +44,7 @@ CSV_HEADER = [
     'COREQUISITE'
 ]
 
-CSV_SECTION_HEADER = [
+CSV_SOC_HEADER = [
     "COURSE NUMBER",
     "COURSE TITLE",
     "MINIMUM CREDITS",
