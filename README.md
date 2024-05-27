@@ -5,6 +5,15 @@ The UMD Schedule Web Scraper project is designed to scrape course information fr
 
 In addition, it addresses the challenge of the unavailability of datasets regarding UMD courses. The lack of existing datasets prompted the need to create one, leading to the development of custom web scrapers. These scrapers are designed to form the datasets required for various projects and analyses.
 
+## Citation Requirement
+If you use any of the datasets or scripts from this project, you must cite the original author:
+- Author: Arav Luthra
+
+Please include the following citation in your work:
+
+"Arav Luthra. UMD Schedule Web Scraper. https://github.com/aluthra23/UMD_Schedule_Web_Scraper/"
+
+
 ## Directory Structure
 
 ### Root Directory
@@ -122,3 +131,6 @@ soupsieve==2.5
 tzdata==2024.1
 urllib3==2.2.1
 ```
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.

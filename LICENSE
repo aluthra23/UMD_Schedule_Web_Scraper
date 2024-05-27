@@ -1,18 +1,6 @@
-# UMD Schedule Web Scraper
-
-This project is licensed under the MIT License with an additional requirement. See below for details.
-
-## Citation Requirement
-If you use any of the datasets or scripts from this project, you must cite the original author:
-- Author: [Your Name]
-- Contact: [Your Contact Information]
-
-Please include the following citation in your work:
-"[Your Name]. UMD Schedule Web Scraper. [URL to your project repository]"
-
----
-
 MIT License
+
+Copyright (c) 2024 Arav Luthra
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
