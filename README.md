@@ -32,19 +32,27 @@ Please include the following citation in your work:
 - `main_catalog_scraper.py`: Calls the `scrape_course_data` method in `scraper.py` for each course prefix. This method scrapes the webpage for all courses under a specific course prefix and stores the information in a CSV file named `umd_catalog_courses.csv`.
 - `scraper.py`: Contains the `scrape_course_data` method which scrapes the following information for each course:
 
-| COURSE PREFIX | COURSE NUMBER | NAME | CREDITS | DESCRIPTION | PREREQUISITE | RESTRICTION | FORMERLY NAMED | RECOMMENDED | CREDIT ONLY GRANTED FOR | REPEATABLE TO | CROSS-LISTED | COREQUISITE |
-| ------------- | -------------- | ---- | ------- | ----------- | ------------ | ----------- | -------------- | ----------- | ------------------------ | ------------- | ------------ | ----------- |
+| COURSE PREFIX | COURSE NUMBER | NAME                       | CREDITS | DESCRIPTION                                                        | PREREQUISITE       | RESTRICTION | FORMERLY NAMED | RECOMMENDED | CREDIT ONLY GRANTED FOR | REPEATABLE TO | CROSS-LISTED | COREQUISITE |
+| ------------- | -------------- | -------------------------- | ------- | ------------------------------------------------------------------ | -------------------- | ----------- | -------------- | ----------- | ------------------------ | ------------- | ------------ | ----------- |
+| CMSC          | CMSC131        | Object-Oriented Programming I | 4       | Introduction to programming and computer science. Emphasizes understanding and implementation of applications using object-oriented techniques. Develops skills such as program design and testing as well as implementation of programs using a graphical IDE. Programming done in Java. | CMSC131 or CMSC133 | MATH140     |
 
   The scraped data is stored in `umd_catalog_courses.csv` which can be found in this directory as well. 
 
 ### `course_prefixes_dataset_creation` Directory
 - `main_prefix_scraper.py`: Visits the course catalog and schedule of classes webpages to scrape the course prefixes and their full forms. The data is stored in a CSV file named `umd_course_prefixes.csv`.
 
+
+  The `umd_course_prefixes.csv` contains the following data:
+
+| COURSE PREFIX | FULL FORM                     |
+| ------------- | ----------------------------- |
+
 ### `schedule_of_classes_scraper` Directory
 - `main_soc_scraper.py`: Calls the `scrape_course_data` method in `soc_scraper.py` for each course acronym. This method scrapes the schedule of classes webpage and stores the following information for each class under each course prefix:
 
-| COURSE NUMBER | COURSE TITLE | MINIMUM CREDITS | MAXIMUM CREDITS | GRADING METHOD | SECTION ID | INSTRUCTOR | TOTAL SEATS | OPEN SEATS | WAITLIST COUNT | LECTURE TIME | DISCUSSION TIME | LAB TIME | UNSPECIFIED TIME MESSAGE | HAS LECTURE | HAS DISCUSSION | HAS LAB | IS NORMAL | IS BLENDED (NORMAL AND ONLINE) | IS ONLINE | SPECIAL RESTRICTION | PREREQUISITE | COREQUISITE | RESTRICTION | CREDIT ONLY GRANTED FOR | FORMERLY | RECOMMENDED | CROSS-LISTED WITH | DESCRIPTION |
-| ------------- | ------------- | --------------- | --------------- | -------------- | ---------- | ---------- | ----------- | ---------- | --------------- | ------------ | --------------- | -------- | ------------------------- | ----------- | -------------- | ------- | --------- | ---------------------------- | ---------- | ------------------ | ------------ | ----------- | ----------- | ------------------------ | -------- | ----------- | ----------------- | ----------- |
+| COURSE NUMBER | COURSE TITLE                 | MINIMUM CREDITS | MAXIMUM CREDITS | GRADING METHOD | SECTION ID | INSTRUCTOR      | TOTAL SEATS | OPEN SEATS | WAITLIST COUNT | LECTURE TIME       | DISCUSSION TIME | LAB TIME | UNSPECIFIED TIME MESSAGE | HAS LECTURE | HAS DISCUSSION | HAS LAB | IS NORMAL | IS BLENDED (NORMAL AND ONLINE) | IS ONLINE | SPECIAL RESTRICTION | PREREQUISITE | COREQUISITE | RESTRICTION | CREDIT ONLY GRANTED FOR | FORMERLY | RECOMMENDED | CROSS-LISTED WITH | DESCRIPTION |
+| ------------- | ----------------------------- | --------------- | --------------- | -------------- | ---------- | --------------- | ----------- | ---------- | --------------- | ------------------- | ---------------- | -------- | ------------------------- | ----------- | -------------- | ------- | --------- | ---------------------------- | ---------- | ------------------ | ------------ | ----------- | ----------- | ------------------------ | -------- | ----------- | ----------------- | ----------- |
+| CMSC131       | Object-Oriented Programming I | 4               | 4               | Reg            | 101        | Elias Gonzalez | 34          | 23         | 0               | MWF 9:00am-9:50am | MW 11:00am-11:50am |          |                           | 1           | 1              | 0       | 1         | 0                            | 0        |                    | MATH140      |             |             |                          |          |             |                   | Introduction to programming and computer science. Emphasizes understanding and implementation of applications using object-oriented techniques. Develops skills such as program design and testing as well as implementation of programs using a graphical IDE. Programming done in Java. |
 
   The scraped data is stored in `class_sections.csv` which can be found in this directory as well.
 
