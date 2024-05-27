@@ -23,22 +23,22 @@ Please include the following citation in your work:
   - `Schedule of Classes CSV Header`: An array defining the CSV header for the schedule of classes scraper.
 - `helper.py`: Contains helper methods for scraping in each directory.
 
-- `check_websites_for_course_updates`
-  - `course_catalog.py`: Contains methods to scrape and validate that the current course acronyms array in `constants.py` includes all course prefixes displayed on the course catalog website. Also includes the `ensure_no_extra_elements` method to ensure there are no extra elements in the course acronyms array.
-  - `schedule_of_classes.py`: Contains methods to scrape and validate that the current course acronyms array in `constants.py` includes all course prefixes displayed on the schedule of classes website. Also includes the `ensure_no_extra_elements` method.
-  - `main_check_both_websites.py`: Main script to run both `course_catalog.py` and `schedule_of_classes.py` to check and validate the course acronyms array against both websites.
+### `check_websites_for_course_updates` Directory
+- `course_catalog.py`: Contains methods to scrape and validate that the current course acronyms array in `constants.py` includes all course prefixes displayed on the course catalog website. Also includes the `ensure_no_extra_elements` method to ensure there are no extra elements in the course acronyms array.
+- `schedule_of_classes.py`: Contains methods to scrape and validate that the current course acronyms array in `constants.py` includes all course prefixes displayed on the schedule of classes website. Also includes the `ensure_no_extra_elements` method.
+- `main_check_both_websites.py`: Main script to run both `course_catalog.py` and `schedule_of_classes.py` to check and validate the course acronyms array against both websites.
 
-- `course_catalog_scraper`
-  - `main_catalog_scraper.py`: Calls the `scrape_course_data` method in `scraper.py` for each course prefix. This method scrapes the webpage for all courses under a specific course prefix and stores the information in a CSV file named `umd_catalog_courses.csv`.
-  - `scraper.py`: Contains the `scrape_course_data` method which scrapes the following information for each course:
+### `course_catalog_scraper` Directory
+- `main_catalog_scraper.py`: Calls the `scrape_course_data` method in `scraper.py` for each course prefix. This method scrapes the webpage for all courses under a specific course prefix and stores the information in a CSV file named `umd_catalog_courses.csv`.
+- `scraper.py`: Contains the `scrape_course_data` method which scrapes the following information for each course:
 
 | COURSE PREFIX | COURSE NUMBER | NAME | CREDITS | DESCRIPTION | PREREQUISITE | RESTRICTION | FORMERLY NAMED | RECOMMENDED | CREDIT ONLY GRANTED FOR | REPEATABLE TO | CROSS-LISTED | COREQUISITE |
 | ------------- | -------------- | ---- | ------- | ----------- | ------------ | ----------- | -------------- | ----------- | ------------------------ | ------------- | ------------ | ----------- |
 
   The scraped data is stored in `umd_catalog_courses.csv`.
 
-- `course_prefixes_dataset_creation`
-  - `main_prefix_scraper.py`: Visits the course catalog and schedule of classes webpages to scrape the course prefixes and their full forms. The data is stored in a CSV file named `umd_course_prefixes.csv`.
+### `course_prefixes_dataset_creation` Directory
+- `main_prefix_scraper.py`: Visits the course catalog and schedule of classes webpages to scrape the course prefixes and their full forms. The data is stored in a CSV file named `umd_course_prefixes.csv`.
 
 - `schedule_of_classes_scraper`
   - `main_soc_scraper.py`: Calls the `scrape_course_data` method in `soc_scraper.py` for each course acronym. This method scrapes the schedule of classes webpage and stores the following information for each class under each course prefix:
