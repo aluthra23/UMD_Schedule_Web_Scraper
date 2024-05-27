@@ -60,7 +60,7 @@ Please include the following citation in your work:
     pip install -r requirements.txt
     ```
 
-3. Run the scrapers:
+3. Run the scrapers: (use python or python3)
     - To check and update course acronyms:
       ```sh
       python check_websites_for_course_updates/main_check_both_websites.py
