@@ -31,20 +31,10 @@ Please include the following citation in your work:
 - `course_catalog_scraper`
   - `main_catalog_scraper.py`: Calls the `scrape_course_data` method in `scraper.py` for each course prefix. This method scrapes the webpage for all courses under a specific course prefix and stores the information in a CSV file named `umd_catalog_courses.csv`.
   - `scraper.py`: Contains the `scrape_course_data` method which scrapes the following information for each course:
-    - "COURSE PREFIX"
-    - "COURSE NUMBER"
-    - "NAME"
-    - "CREDITS"
-    - "DESCRIPTION"
-    - "PREREQUISITE"
-    - "RESTRICTION"
-    - "FORMERLY NAMED"
-    - "RECOMMENDED"
-    - "CREDIT ONLY GRANTED FOR"
-    - "REPEATABLE TO"
-    - "CROSS-LISTED"
-    - "COREQUISITE"
-    
+
+| COURSE PREFIX | COURSE NUMBER | NAME | CREDITS | DESCRIPTION | PREREQUISITE | RESTRICTION | FORMERLY NAMED | RECOMMENDED | CREDIT ONLY GRANTED FOR | REPEATABLE TO | CROSS-LISTED | COREQUISITE |
+| ------------- | -------------- | ---- | ------- | ----------- | ------------ | ----------- | -------------- | ----------- | ------------------------ | ------------- | ------------ | ----------- |
+
   The scraped data is stored in `umd_catalog_courses.csv`.
 
 - `course_prefixes_dataset_creation`
@@ -52,35 +42,10 @@ Please include the following citation in your work:
 
 - `schedule_of_classes_scraper`
   - `main_soc_scraper.py`: Calls the `scrape_course_data` method in `soc_scraper.py` for each course acronym. This method scrapes the schedule of classes webpage and stores the following information for each class under each course prefix:
-    - "COURSE NUMBER"
-    - "COURSE TITLE"
-    - "MINIMUM CREDITS"
-    - "MAXIMUM CREDITS"
-    - "GRADING METHOD"
-    - "SECTION ID"
-    - "INSTRUCTOR"
-    - "TOTAL SEATS"
-    - "OPEN SEATS"
-    - "WAITLIST COUNT"
-    - "LECTURE TIME"
-    - "DISCUSSION TIME"
-    - "LAB TIME"
-    - "UNSPECIFIED TIME MESSAGE"
-    - "HAS LECTURE"
-    - "HAS DISCUSSION"
-    - "HAS LAB"
-    - "IS NORMAL"
-    - "IS BLENDED (NORMAL AND ONLINE)"
-    - "IS ONLINE"
-    - "SPECIAL RESTRICTION"
-    - "PREREQUISITE"
-    - "COREQUISITE"
-    - "RESTRICTION"
-    - "CREDIT ONLY GRANTED FOR"
-    - "FORMERLY"
-    - "RECOMMENDED"
-    - "CROSS-LISTED WITH"
-    - "DESCRIPTION"
+
+| COURSE NUMBER | COURSE TITLE | MINIMUM CREDITS | MAXIMUM CREDITS | GRADING METHOD | SECTION ID | INSTRUCTOR | TOTAL SEATS | OPEN SEATS | WAITLIST COUNT | LECTURE TIME | DISCUSSION TIME | LAB TIME | UNSPECIFIED TIME MESSAGE | HAS LECTURE | HAS DISCUSSION | HAS LAB | IS NORMAL | IS BLENDED (NORMAL AND ONLINE) | IS ONLINE | SPECIAL RESTRICTION | PREREQUISITE | COREQUISITE | RESTRICTION | CREDIT ONLY GRANTED FOR | FORMERLY | RECOMMENDED | CROSS-LISTED WITH | DESCRIPTION |
+| ------------- | ------------- | --------------- | --------------- | -------------- | ---------- | ---------- | ----------- | ---------- | --------------- | ------------ | --------------- | -------- | ------------------------- | ----------- | -------------- | ------- | --------- | ---------------------------- | ---------- | ------------------ | ------------ | ----------- | ----------- | ------------------------ | -------- | ----------- | ----------------- | ----------- |
+
   The scraped data is stored in `class_sections.csv`.
 
 ## Setup Instructions
