@@ -1,7 +1,7 @@
 # Web Scraper for UMD Course Data
 
 ## Overview
-The UMD Schedule Web Scraper project is designed to scrape course information from the University of Maryland's [Course Catalog](https://academiccatalog.umd.edu/undergraduate/approved-courses/) and [Schedule of Classes](https://app.testudo.umd.edu/soc/) websites. This project is structured into several directories, each containing specific scripts that perform various tasks related to data scraping and validation.
+The UMD Schedule Web Scraper project is designed to scrape course information from the University of Maryland's [Course Catalog](https://academiccatalog.umd.edu/undergraduate/approved-courses/) and [Schedule of Classes](https://app.testudo.umd.edu/soc/) websites and then make datasets based on the data scraped. This project is structured into several directories, each containing specific scripts that perform various tasks related to data scraping and validation.
 
 In addition, it addresses the challenge of the unavailability of datasets regarding UMD courses. The lack of existing datasets prompted the need to create one, leading to the development of custom web scrapers. These scrapers are designed to form the datasets required for various projects and analyses.
 
@@ -12,6 +12,25 @@ If you use any of the datasets or scripts from this project, you must cite the o
 Please include the following citation in your work:
 
 "Arav Luthra. UMD Schedule Web Scraper. https://github.com/aluthra23/UMD_Schedule_Web_Scraper/"
+
+## Datasets
+- `umd_catalog_courses.csv`
+  
+| COURSE PREFIX | COURSE NUMBER | NAME     | CREDITS | DESCRIPTION                                                                                                          | PREREQUISITE                    | RESTRICTION                                                                                                  | FORMERLY NAMED | RECOMMENDED | CREDIT ONLY GRANTED FOR | REPEATABLE TO | CROSS-LISTED | COREQUISITE |
+| ------------- | -------------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------- | ----------- | ------------------------ | ------------- | ------------ | ----------- |
+| CMSC          | CMSC351        | Algorithms | 3       | A systematic study of the complexity of some elementary algorithms related to sorting, graphs and trees, and combinatorics. Algorithms are analyzed using mathematical techniques to solve recurrences and summations. | Minimum grade of C- in CMSC250 and CMSC216 | Must be in a major within the CMNS-Computer Science department; or must be in Engineering: Computer program; or must be in the Computer Science Minor program; and Permission from the CMSC - Computer Science department |                |             |                          |               |              |             |
+
+- `umd_course_prefixes.csv`
+
+| COURSE PREFIX | FULL FORM            |
+| ------------- | -------------------- |
+| CMSC          | Computer Science     |
+
+- `class_sections.csv`
+
+| COURSE NUMBER | COURSE TITLE | MINIMUM CREDITS | MAXIMUM CREDITS | GRADING METHOD | SECTION ID | INSTRUCTOR | TOTAL SEATS | OPEN SEATS | WAITLIST COUNT | LECTURE TIME | DISCUSSION TIME | LAB TIME | UNSPECIFIED TIME MESSAGE | HAS LECTURE | HAS DISCUSSION | HAS LAB | IS NORMAL | IS BLENDED (NORMAL AND ONLINE) | IS ONLINE | SPECIAL RESTRICTION | PREREQUISITE | COREQUISITE | RESTRICTION | CREDIT ONLY GRANTED FOR | FORMERLY | RECOMMENDED                                                                                                                                                                                                            | CROSS-LISTED WITH                                                                                                                                                                                                      | DESCRIPTION                                                                                                                                                                                                            |
+| ------------- | ------------ | --------------- | --------------- | -------------- | ---------- | ---------- | ------------ | ---------- | --------------- | ------------- | ---------------- | -------- | ------------------------- | ----------- | -------------- | ------- | --------- | ---------------------------- | ---------- | ------------------ | ------------ | ----------- | ----------- | ------------------------ | -------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| CMSC351       | Algorithms   | 3               | 3               | Reg            | 401        | Herve Franceschi | 135      | 0          | 0               | MWF 1:00pm-1:50pm |                  |          |                           | 1           | 0              | 0       | 1         | 0                            | 0         |                    | Minimum grade of C- in CMSC250 and CMSC216 | | Must be in a major within the CMNS-Computer Science department; or must be in Engineering: Computer program; or must be in the Computer Science Minor program; and Permission from the CMSC - Computer Science department | | | | | A systematic study of the complexity of some elementary algorithms related to sorting, graphs and trees, and combinatorics. Algorithms are analyzed using mathematical techniques to solve recurrences and summations. |
 
 
 ## Directory Structure
