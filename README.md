@@ -35,7 +35,7 @@ Please include the following citation in your work:
 | COURSE PREFIX | COURSE NUMBER | NAME | CREDITS | DESCRIPTION | PREREQUISITE | RESTRICTION | FORMERLY NAMED | RECOMMENDED | CREDIT ONLY GRANTED FOR | REPEATABLE TO | CROSS-LISTED | COREQUISITE |
 | ------------- | -------------- | ---- | ------- | ----------- | ------------ | ----------- | -------------- | ----------- | ------------------------ | ------------- | ------------ | ----------- |
 
-  The scraped data is stored in `umd_catalog_courses.csv`.
+  The scraped data is stored in `umd_catalog_courses.csv` which can be found in this directory as well. 
 
 ### `course_prefixes_dataset_creation` Directory
 - `main_prefix_scraper.py`: Visits the course catalog and schedule of classes webpages to scrape the course prefixes and their full forms. The data is stored in a CSV file named `umd_course_prefixes.csv`.
@@ -46,7 +46,7 @@ Please include the following citation in your work:
 | COURSE NUMBER | COURSE TITLE | MINIMUM CREDITS | MAXIMUM CREDITS | GRADING METHOD | SECTION ID | INSTRUCTOR | TOTAL SEATS | OPEN SEATS | WAITLIST COUNT | LECTURE TIME | DISCUSSION TIME | LAB TIME | UNSPECIFIED TIME MESSAGE | HAS LECTURE | HAS DISCUSSION | HAS LAB | IS NORMAL | IS BLENDED (NORMAL AND ONLINE) | IS ONLINE | SPECIAL RESTRICTION | PREREQUISITE | COREQUISITE | RESTRICTION | CREDIT ONLY GRANTED FOR | FORMERLY | RECOMMENDED | CROSS-LISTED WITH | DESCRIPTION |
 | ------------- | ------------- | --------------- | --------------- | -------------- | ---------- | ---------- | ----------- | ---------- | --------------- | ------------ | --------------- | -------- | ------------------------- | ----------- | -------------- | ------- | --------- | ---------------------------- | ---------- | ------------------ | ------------ | ----------- | ----------- | ------------------------ | -------- | ----------- | ----------------- | ----------- |
 
-  The scraped data is stored in `class_sections.csv`.
+  The scraped data is stored in `class_sections.csv` which can be found in this directory as well.
 
 ## Setup Instructions
 1. Clone the repository:
