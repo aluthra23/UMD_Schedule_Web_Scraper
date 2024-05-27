@@ -15,7 +15,10 @@ Please include the following citation in your work:
 
 ## Datasets
 
-### `umd_catalog_courses.csv`
+### With the webscrapers that I have built, I have developed the following 3 datasets: 
+
+
+### `umd_catalog_courses.csv` (Found in course_catalog_scraper folder)
 This is a dataset which contains data for each undergraduate course taught at UMD and was scraped from the Course Catalog page, as described above. The dataset looks like the following, with CMSC351 being an example. Any empty data for any of the fields implies that the specific course didn't have any information regarding it. 
   
 | COURSE PREFIX | COURSE NUMBER | NAME     | CREDITS | DESCRIPTION                                                                                                          | PREREQUISITE                    | RESTRICTION                                                                                                  | FORMERLY NAMED | RECOMMENDED | CREDIT ONLY GRANTED FOR | REPEATABLE TO | CROSS-LISTED | COREQUISITE |
@@ -23,14 +26,14 @@ This is a dataset which contains data for each undergraduate course taught at UM
 | CMSC          | CMSC351        | Algorithms | 3       | A systematic study of the complexity of some elementary algorithms related to sorting, graphs and trees, and combinatorics. Algorithms are analyzed using mathematical techniques to solve recurrences and summations. | Minimum grade of C- in CMSC250 and CMSC216 | Must be in a major within the CMNS-Computer Science department; or must be in Engineering: Computer program; or must be in the Computer Science Minor program; and Permission from the CMSC - Computer Science department |                |             |                          |               |              |             |
 
 
-### `umd_course_prefixes.csv`
+### `umd_course_prefixes.csv` (Found in course_prefixes_dataset_creation folder)
 This is a dataset which which stores each course prefix and also stores its respective full form. The data was scraped from the Course Catalog page, as described above. The dataset looks like the following with CMSC being an example. 
 
 | COURSE PREFIX | FULL FORM            |
 | ------------- | -------------------- |
 | CMSC          | Computer Science     |
 
-### `umd_schedule_of_classes_courses.csv`
+### `umd_schedule_of_classes_courses.csv` (Found in schedule_of_classes_scraper folder)
 This is a dataset which contains data for each undergraduate course that will be taught in the Fall 2024 Semester and was scraped from the Schedule of Classes page, as described above. The scraper can be easily adjusted for other semesters as well. Some courses are repeated because they may have more than 1 section and teacher teaching the course. The dataset looks like the following, with CMSC351 being an example (There's 4 sections teaching 351 in the Fall 2024 Semester). Any empty data for any of the fields implies that the specific course didn't have any information regarding it. 
 
 | COURSE NUMBER | COURSE TITLE | MINIMUM CREDITS | MAXIMUM CREDITS | GRADING METHOD | SECTION ID | INSTRUCTOR      | TOTAL SEATS | OPEN SEATS | WAITLIST COUNT | LECTURE TIME       | DISCUSSION TIME | LAB TIME | UNSPECIFIED TIME MESSAGE | HAS LECTURE | HAS DISCUSSION | HAS LAB | IS NORMAL | IS BLENDED (NORMAL AND ONLINE) | IS ONLINE | SPECIAL RESTRICTION | PREREQUISITE                        | COREQUISITE | RESTRICTION | CREDIT ONLY GRANTED FOR | FORMERLY | RECOMMENDED | CROSS-LISTED WITH | DESCRIPTION                                                                                                                                                                                                                                             |
