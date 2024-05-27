@@ -12,4 +12,4 @@ with open('umd_schedule_of_classes_courses.csv', mode='w', newline='') as file:
     for course_acronym in constants.course_acronyms:
         soc_scraper.scrape_course_data(course_acronym, file)
 
-    print("Data collection complete. Data has been saved to open_sections.csv")
+    print("Data collection complete. Data has been saved to umd_schedule_of_classes_courses.csv")
