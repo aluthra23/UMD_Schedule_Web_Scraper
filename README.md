@@ -3,6 +3,8 @@
 ## Overview
 The UMD Schedule Web Scraper project is designed to scrape course information from the University of Maryland's [Course Catalog](https://academiccatalog.umd.edu/undergraduate/approved-courses/) and [Schedule of Classes](https://app.testudo.umd.edu/soc/) websites. This project is structured into several directories, each containing specific scripts that perform various tasks related to data scraping and validation.
 
+In addition, it addresses the challenge of the unavailability of datasets regarding UMD courses. The lack of existing datasets prompted the need to create one, leading to the development of custom web scrapers. These scrapers are designed to form the datasets required for various projects and analyses.
+
 ## Directory Structure
 
 ### Root Directory
