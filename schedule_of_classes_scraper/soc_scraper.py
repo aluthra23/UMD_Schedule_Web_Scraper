@@ -125,6 +125,9 @@ def update_classes_data(course_number, open_sections, class_name, file_path, cla
                 "LECTURE TIME": None,
                 "DISCUSSION TIME": None,
                 "LAB TIME": None,
+                "LECTURE ROOM": None,
+                "DISCUSSION ROOM": None,
+                "LAB ROOM": None,
                 "UNSPECIFIED TIME MESSAGE": None,
                 "HAS LECTURE": 0,
                 "HAS DISCUSSION": 0,
@@ -187,26 +190,36 @@ def update_classes_data(course_number, open_sections, class_name, file_path, cla
 
                     class_type = time.find('div', class_='two columns')
 
+                    room = time.find('span', class_='class-building')
+
                     if class_type:
                         class_type = class_type.text.strip().upper()
 
                         if class_type == "DISCUSSION":
-                            section_data["HAS DISCUSSION"] = 1
-                            section_data["DISCUSSION TIME"] = f"{days} {start_time}-{end_time}"
-
-                            # if section_data["HAS LAB"]:
-                            #     print(f"{course_number} {section_id} has lab and discussion")
+                            class_type = "DISCUSSION"
 
                         elif class_type == "LAB":
-                            section_data["HAS LAB"] = 1
-                            section_data["LAB TIME"] = f"{days} {start_time}-{end_time}"
+                            class_type = "LAB"
 
-                            # if section_data["HAS DISCUSSION"]:
-                            #     print(f"{course_number} {section_id} has lab and discussion")
                     else:
                         class_type = "LECTURE"
-                        section_data["HAS LECTURE"] = 1
-                        section_data["LECTURE TIME"] = f"{days} {start_time}-{end_time}"
+
+                    if class_type in {"DISCUSSION", "LAB", "LECTURE"}:
+                        section_data[f"HAS {class_type}"] = 1
+                        section_data[f"{class_type} TIME"] = f"{days} {start_time}-{end_time}"
+
+                        building = room.find('span', class_='building-code')
+                        if building:
+                            building = building.text.strip()
+                            room_number = room.find('span', class_='class-room')
+
+                            if room_number:
+                                room_number = room_number.text.strip()
+                                section_data[f"{class_type} ROOM"] = f"{building} {room_number}"
+                            else:
+                                section_data[f"{class_type} ROOM"] = building
+                        else:
+                            section_data[f"{class_type} ROOM"] = room.text.strip()
 
                 else:
                     message = time.find('span', class_='elms-class-message')
