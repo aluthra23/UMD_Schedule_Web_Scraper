@@ -1,7 +1,4 @@
 import pandas as pd
-import os
-import constants
-import csv
 import requests
 from bs4 import BeautifulSoup
 
