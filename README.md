@@ -10,6 +10,7 @@ The UMD Schedule Web Scraper project is designed to scrape course information fr
   - `Course Acronyms`: An array of course prefixes.
   - `Course Catalog CSV Header`: An array defining the CSV header for the course catalog scraper.
   - `Schedule of Classes CSV Header`: An array defining the CSV header for the schedule of classes scraper.
+- `helper.py`: Contains helper methods for scraping in each directory.
 
 - `check_websites_for_course_updates`
   - `course_catalog.py`: Contains methods to scrape and validate that the current course acronyms array in `constants.py` includes all course prefixes displayed on the course catalog website. Also includes the `ensure_no_extra_elements` method to ensure there are no extra elements in the course acronyms array.
