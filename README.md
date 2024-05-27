@@ -55,7 +55,7 @@ Please include the following citation in your work:
     cd UMD_Schedule_Web_Scraper
     ```
 
-2. Install the required packages:
+2. Install the required packages (Make sure you have pip downloaded):
     ```sh
     pip install -r requirements.txt
     ```
