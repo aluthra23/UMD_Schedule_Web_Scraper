@@ -3,7 +3,7 @@ import constants
 import csv
 
 
-with open('class_sections.csv', mode='w', newline='') as file:
+with open('umd_schedule_of_classes_courses.csv', mode='w', newline='') as file:
     writer = csv.writer(file)
     # Write the header row
     writer.writerow(constants.CSV_SOC_HEADER)
