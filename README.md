@@ -53,26 +53,22 @@ Please include the following citation in your work:
 
 | COURSE PREFIX | COURSE NUMBER | NAME     | CREDITS | DESCRIPTION                                                                                                          | PREREQUISITE                    | RESTRICTION                                                                                                  | FORMERLY NAMED | RECOMMENDED | CREDIT ONLY GRANTED FOR | REPEATABLE TO | CROSS-LISTED | COREQUISITE |
 | ------------- | -------------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------- | ----------- | ------------------------ | ------------- | ------------ | ----------- |
-| CMSC          | CMSC351        | Algorithms | 3       | A systematic study of the complexity of some elementary algorithms related to sorting, graphs and trees, and combinatorics. Algorithms are analyzed using mathematical techniques to solve recurrences and summations. | Minimum grade of C- in CMSC250 and CMSC216 | Must be in a major within the CMNS-Computer Science department; or must be in Engineering: Computer program; or must be in the Computer Science Minor program; and Permission from the CMSC - Computer Science department |                |             |                          |               |              |             |
-
-  The scraped data is stored in `umd_catalog_courses.csv` which can be found in this directory as well. 
+ 
+  The scraped data is stored in `umd_catalog_courses.csv`, as seen above. 
 
 ### `course_prefixes_dataset_creation` Directory
 - `main_prefix_scraper.py`: Visits the course catalog and schedule of classes webpages to scrape the course prefixes and their full forms. The data is stored in a CSV file named `umd_course_prefixes.csv`.
-
 
   The `umd_course_prefixes.csv` contains the following data:
 
 | COURSE PREFIX | FULL FORM            |
 | ------------- | -------------------- |
-| CMSC          | Computer Science     |
 
 ### `schedule_of_classes_scraper` Directory
 - `main_soc_scraper.py`: Calls the `scrape_course_data` method in `soc_scraper.py` for each course acronym. This method scrapes the schedule of classes webpage and stores the following information for each class under each course prefix:
 
 | COURSE NUMBER | COURSE TITLE | MINIMUM CREDITS | MAXIMUM CREDITS | GRADING METHOD | SECTION ID | INSTRUCTOR | TOTAL SEATS | OPEN SEATS | WAITLIST COUNT | LECTURE TIME | DISCUSSION TIME | LAB TIME | UNSPECIFIED TIME MESSAGE | HAS LECTURE | HAS DISCUSSION | HAS LAB | IS NORMAL | IS BLENDED (NORMAL AND ONLINE) | IS ONLINE | SPECIAL RESTRICTION | PREREQUISITE | COREQUISITE | RESTRICTION | CREDIT ONLY GRANTED FOR | FORMERLY | RECOMMENDED                                                                                                                                                                                                            | CROSS-LISTED WITH                                                                                                                                                                                                      | DESCRIPTION                                                                                                                                                                                                            |
 | ------------- | ------------ | --------------- | --------------- | -------------- | ---------- | ---------- | ------------ | ---------- | --------------- | ------------- | ---------------- | -------- | ------------------------- | ----------- | -------------- | ------- | --------- | ---------------------------- | ---------- | ------------------ | ------------ | ----------- | ----------- | ------------------------ | -------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| CMSC351       | Algorithms   | 3               | 3               | Reg            | 401        | Herve Franceschi | 135      | 0          | 0               | MWF 1:00pm-1:50pm |                  |          |                           | 1           | 0              | 0       | 1         | 0                            | 0         |                    | Minimum grade of C- in CMSC250 and CMSC216 | | Must be in a major within the CMNS-Computer Science department; or must be in Engineering: Computer program; or must be in the Computer Science Minor program; and Permission from the CMSC - Computer Science department | | | | | A systematic study of the complexity of some elementary algorithms related to sorting, graphs and trees, and combinatorics. Algorithms are analyzed using mathematical techniques to solve recurrences and summations. |
 
   The scraped data is stored in `umd_schedule_of_classes_courses.csv` which can be found in this directory as well.
 
