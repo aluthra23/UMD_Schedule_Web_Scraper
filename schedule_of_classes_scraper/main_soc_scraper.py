@@ -3,8 +3,6 @@ import constants
 import csv
 import time
 
-
-
 with open('umd_schedule_of_classes_courses.csv', mode='w', newline='') as file:
     start_time = time.time()
     writer = csv.writer(file)
