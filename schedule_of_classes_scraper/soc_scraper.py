@@ -45,6 +45,7 @@ def scrape_course_data(course_acronym, file):
         ## DO DESCRIPTION AS WELL
 
         description_fields = {
+            "GEN_EDS FULFILLED": "",
             "PREREQUISITE":None,
             "COREQUISITE":None,
             "RESTRICTION":None,
@@ -68,6 +69,11 @@ def scrape_course_data(course_acronym, file):
         if descriptions:
             description_fields = helper.extract_abnormal_course_details(existing_dict=description_fields,
                                                                   actual_html=descriptions)
+
+        gen_eds = course.find('div', class_='gen-ed-codes-group six columns')
+
+        if gen_eds and str(gen_eds.text).strip():
+            description_fields["GEN_EDS FULFILLED"] = helper.remove_all_whitespace(gen_eds.text.strip())
 
 
         # Normal Classes
@@ -115,6 +121,7 @@ def update_classes_data(course_number, open_sections, class_name, file_path, cla
                 "MINIMUM CREDITS": section_min_credits,
                 "MAXIMUM CREDITS": section_max_credits,
                 "GRADING METHOD": section_grading,
+                "GEN_EDS FULFILLED": description_fields["GEN_EDS FULFILLED"],
                 "SECTION ID": None,
                 "INSTRUCTOR": None,
                 "TOTAL SEATS": None,
