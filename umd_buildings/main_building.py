@@ -1,15 +1,19 @@
-import requests
-from bs4 import BeautifulSoup
-import pandas as pd
+import building_code_scraper
+import constants
+import csv
 
-# URL of the webpage containing the building codes and full names
-url = "https://www.arcgis.com/home/item.html?id=3e678424faaa4fcd8fd9af75885d4472"
 
-# Send a GET request to the webpage
-response = requests.get(url)
+with open('umd_schedule_of_classes_courses.csv', mode='w', newline='') as file:
+    writer = csv.writer(file)
+    # Write the header row
+    writer.writerow(constants.CSV_SOC_HEADER)
 
-# Parse the HTML content of the webpage
-soup = BeautifulSoup(response.content, 'html.parser')
+    # Iterate over each course acronym
+    for course_acronym in constants.course_acronyms:
+        soc_scraper.scrape_course_data(course_acronym, file)
+
+    print("Data collection complete. Data has been saved to umd_schedule_of_classes_courses.csv")
+
 
 # Find the table or relevant section containing the building information
 # Adjust the selector based on the actual structure of the webpage

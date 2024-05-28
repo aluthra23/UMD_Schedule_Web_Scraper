@@ -121,27 +121,15 @@ def update_classes_data(course_number, open_sections, class_name, file_path, cla
                 "OPEN SEATS": None,
                 "WAITLIST COUNT": None,
                 "LECTURE TIME": None,
-                "2ND LISTED LECTURE TIME": None,
-                "3RD LISTED LECTURE TIME": None,
                 "DISCUSSION TIME": None,
-                "2ND LISTED DISCUSSION TIME": None,
                 "LAB TIME": None,
-                "2ND LISTED LAB TIME": None,
                 "LECTURE ROOM": None,
-                "2ND LISTED LECTURE ROOM": None,
-                "3RD LISTED LECTURE ROOM": None,
                 "DISCUSSION ROOM": None,
-                "2ND LISTED DISCUSSION ROOM": None,
                 "LAB ROOM": None,
-                "2ND LISTED LAB ROOM": None,
                 "UNSPECIFIED TIME MESSAGE": None,
                 "HAS LECTURE": 0,
-                "HAS 2ND LISTED LECTURE": 0,
-                "HAS 3RD LISTED LECTURE": 0,
                 "HAS DISCUSSION": 0,
-                "HAS 2ND LISTED DISCUSSION": 0,
                 "HAS LAB": 0,
-                "HAS 2ND LISTED LAB": 0,
                 "IS NORMAL": 0,
                 "IS BLENDED (NORMAL AND ONLINE)": 0,
                 "IS ONLINE": 0,
@@ -223,38 +211,34 @@ def update_classes_data(course_number, open_sections, class_name, file_path, cla
 
                 if class_type:
                     class_type = class_type.text.strip().upper()
-
-                    if section_data[f"HAS {class_type}"]:
-                        class_type = f"2ND LISTED {class_type}"
                 else:
-                    class_type = "LECTURE"
-
-                    if section_data["HAS LECTURE"] and class_type == "LECTURE":
-                        class_type = "2ND LISTED LECTURE"
-
-                        if section_data[f"HAS {class_type}"]:
-                            class_type = "3RD LISTED LECTURE"
-
-                section_data[f"HAS {class_type}"] = 1
-
-                if has_specific_time:
-                    section_data[f"{class_type} TIME"] = f"{days} {start_time}-{end_time}"
-                else:
-                    section_data[f"{class_type} TIME"] = days
-
-                if room:
-                    building = room.find('span', class_='building-code')
-                    if building:
-                        building = building.text.strip()
-                        room_number = room.find('span', class_='class-room')
-
-                        if room_number:
-                            room_number = room_number.text.strip()
-                            section_data[f"{class_type} ROOM"] = f"{building} {room_number}"
-                        else:
-                            section_data[f"{class_type} ROOM"] = building
+                    if i > 0:
+                        class_type = "DISCUSSION"
+                        print({course_number})
                     else:
-                        section_data[f"{class_type} ROOM"] = room.text.strip()
+                        class_type = "LECTURE"
+
+                if class_type in {"DISCUSSION", "LAB", "LECTURE"}:
+                    section_data[f"HAS {class_type}"] = 1
+
+                    if has_specific_time:
+                        section_data[f"{class_type} TIME"] = f"{days} {start_time}-{end_time}"
+                    else:
+                        section_data[f"{class_type} TIME"] = days
+
+                    if room:
+                        building = room.find('span', class_='building-code')
+                        if building:
+                            building = building.text.strip()
+                            room_number = room.find('span', class_='class-room')
+
+                            if room_number:
+                                room_number = room_number.text.strip()
+                                section_data[f"{class_type} ROOM"] = f"{building} {room_number}"
+                            else:
+                                section_data[f"{class_type} ROOM"] = building
+                        else:
+                            section_data[f"{class_type} ROOM"] = room.text.strip()
 
             # Iterating through section-texts-container
             restrictions = section.find('div', class_="section-texts-container")
@@ -285,5 +269,4 @@ def update_classes_data(course_number, open_sections, class_name, file_path, cla
 
     if data:
         df = pd.DataFrame(data)
-        # df.to_csv(file_path, mode='a', header=False, index=False, quotechar='"', quoting=csv.QUOTE_ALL)
-        df.to_csv(file_path, mode='a', header=False, index=False)
+        df.to_csv(file_path, mode='a', header=False, index=False, quotechar='"', quoting=csv.QUOTE_ALL)
