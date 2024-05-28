@@ -285,5 +285,5 @@ def update_classes_data(course_number, open_sections, class_name, file_path, cla
 
     if data:
         df = pd.DataFrame(data)
-        # df.to_csv(file_path, mode='a', header=False, index=False, quotechar='"', quoting=csv.QUOTE_ALL)
-        df.to_csv(file_path, mode='a', header=False, index=False)
+        df.to_csv(file_path, mode='a', header=False, index=False, quotechar='"', quoting=csv.QUOTE_ALL)
+        # df.to_csv(file_path, mode='a', header=False, index=False)
