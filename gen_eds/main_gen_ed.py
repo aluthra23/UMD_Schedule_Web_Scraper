@@ -31,5 +31,4 @@ with open('gen_eds.csv', mode='w', newline='') as file:
 
         writer.writerow([acronym, full_form])
 
-
     print("Data collection complete. Data has been saved to gen_eds.csv")

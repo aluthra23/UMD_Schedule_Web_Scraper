@@ -1,4 +1,5 @@
 COURSE PREFIX,FULL FORM
+AAAS,African American and Africana Studies
 AAPS,Academic Achievement Programs
 AASP,African American Studies
 AAST,Asian American Studies
@@ -102,6 +103,7 @@ ENGL,English
 ENGX,English Education Abroad
 ENMA,"Engineering, Materials"
 ENME,"Engineering, Mechanical"
+ENMT,Mechatronics Engineering
 ENNU,"Engineering, Nuclear"
 ENPM,"Engineering, Professional Masters"
 ENRE,Reliability Engineering
@@ -196,6 +198,7 @@ PORT,Portuguese
 PSYC,Psychology
 RDEV,Real Estate Development
 RELS,Religious Studies
+RELX,Religious Studies Education Abroad
 RUSS,Russian
 SLAA,Second Language Acquisition and Application
 SLLC,"School of Languages, Literatures and Cultures"
@@ -206,7 +209,7 @@ SPAN,Spanish
 SPAX,Spanish Education Abroad
 SPHL,Public Health
 STAT,Statistics and Probability
-SURV,Survey Methodology
+SURV,Survey and Data Science
 TDPS,"Theatre, Dance and Performance Studies"
 THET,Theatre
 THEX,Theatre Education Abroad
